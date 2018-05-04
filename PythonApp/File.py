@@ -2,15 +2,11 @@ import os
 import subprocess
 
 
-class Tool:
-    def __init__(self, path):
-        self.path = path
-
-    def execute_fsecure_tool(self):
-        subprocess.call(self.path)
+class File:
+    # A class that is meant to check if the file fsdiag.7z exists on the user´s desktop
 
     @staticmethod
-    def check_fsecure_existence():
+    def check_fsecure_file_existence():
         try:
             file = os.path.expanduser("~/Desktop/fsdiag.7z")
             #A test with a text file on my desktop and it works
